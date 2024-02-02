@@ -6,6 +6,19 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --primary-dark: #0d0e11;
+  --paragraph-white: white;
+  --primary: #6857f6;
+  --secondary-primary: #a549e2;
+  --dark-violet: #4a3a76;
+  --grey: #848484;
+}
+
+html,body,main{
+  background-image: url(../public/bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #111118;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,12 +31,9 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
@@ -31,3 +41,27 @@ body {
     text-wrap: balance;
   }
 }
+
+
+/* navlinks */
+
+.link {
+  position: relative;
+  text-decoration: none;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #7b52f0;
+  transition: width .3s;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
