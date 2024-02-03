@@ -14,11 +14,13 @@
   --grey: #848484;
 }
 
-html,body,main{
+main{
   background-image: url(../public/bg.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position: top;
   background-color: #111118;
+  z-index: -30;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -65,3 +67,22 @@ body {
   width: 100%;
 }
 
+
+/* maruqe */
+.marquee {
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-content {
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+      transform: translateY(100%);
+  }
+  to {
+      transform: translateY(-100%);
+  }
+}

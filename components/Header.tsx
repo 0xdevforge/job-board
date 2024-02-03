@@ -68,8 +68,8 @@ export default function Header() {
                     <Image src={seventh} alt="logo" className='relative  bottom-2' />
                 </div></div>        
 
-            <header className='min-h-screen flex w-full items-center justify-center z-30'>
-                <div className="-translate-y-[690px]">
+            <header className=' flex w-full items-center justify-center z-30 -translate-y-[500px]'>
+                <div className=" ">
                     <div className="border text-lg py-2 px-6 rounded-full lg:mx-72 flex gap-2 text-gray-400 border-gray-400">
                         <span className='text-white'>The best job seekers</span> | <span className='bg-clip-text flex gap-2 items-center text-transparent bg-gradient-to-b from-[#8550ec] to-[#924ee9] group hover:text-white transition-colors duration-300 ease-in-out cursor-pointer'>
                             Explore <FaArrowRight className='ml-2 transition-transform duration-300 ease-in-out group-hover:translate-x-2' color='#8550ec' />
